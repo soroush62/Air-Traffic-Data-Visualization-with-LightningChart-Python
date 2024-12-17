@@ -406,7 +406,7 @@ series.append_samples(
     lookup_values=lookup_values
 )
 ```
-![](Images/Total_Flights_and_Passengers_by_Location.gif)
+![](Images/Total_Flights_and_Passengers_by_Location.png)
 ---
 
 #### **9. Monthly Airline Traffic: Flights and Load Factor (Bar and Line Chart)**
