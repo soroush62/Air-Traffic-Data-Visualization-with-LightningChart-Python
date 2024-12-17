@@ -1,6 +1,5 @@
 # **Air Traffic Data Visualization with LightningChart Python**
 
-## **Air Traffic Data Visualization**
 ### **What is it and its Importance for Monitoring Air Traffic Data**
 Air traffic data visualization is the process of graphically representing flight-related information, such as routes, passenger counts, and flight frequencies. This process is critical for monitoring air traffic in real-time, identifying trends, and improving operational efficiency. By using visual tools, aviation stakeholders—such as air traffic controllers, airport managers, and airline operators—can quickly interpret large datasets and make data-driven decisions.
 
