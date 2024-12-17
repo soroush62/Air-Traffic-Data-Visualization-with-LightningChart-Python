@@ -214,7 +214,7 @@ chart.open(method="browser")
 
 ## **5. Monthly Distribution of Passengers (Polar and Radar Chart)**
 
-## **Description:**  
+### **Description:**  
 This dashboard consists of four visualizations aimed at analyzing air traffic trends, flight types, and carrier performance:
 
 1. **Monthly Distribution of Total Passengers (Polar Chart):**  
@@ -233,9 +233,7 @@ This dashboard consists of four visualizations aimed at analyzing air traffic tr
      - **Charter Flights**  
    - The data is normalized using min-max scaling for comparability.
 
----
-
-## **Results:**  
+### **Results:**  
 - **Monthly Passenger Trends (Polar Chart):**  
   - Passenger traffic peaks during **June, July, and August**, corresponding to summer vacations. Lower demand is observed in **January and February**.
 
@@ -250,9 +248,7 @@ This dashboard consists of four visualizations aimed at analyzing air traffic tr
   - Significant variability exists across carriers for **Total Passengers**, **Total Flights**, and **Charter Flights**.  
   - Some carriers lead in specific metrics, while others underperform in charter or total flights.
 
----
-
-## **Use Cases:**  
+### **Use Cases:**  
 - **Seasonal Demand Analysis:**  
    - Identify peak travel months for better resource planning and scheduling additional flights during high-demand periods.  
 
@@ -317,14 +313,12 @@ chart.open(method="browser")
 
 ## **7. Flight Intensity and Annual Distribution (Map Chart)**
 
-## **Description:**  
+### **Description:**  
 This visualization consists of two key charts—**Annual Flight Distribution by Country (Bar Chart)** and **Global Flight Intensity (Map Chart)**—for the year 2020. The charts provide a comprehensive view of flight volumes across countries:  
 - **Bar Chart**: Displays the number of total flights for each country, sorted by flight volume.  
 - **Map Chart**: Visualizes global flight intensity by country using color gradients, where higher intensities are represented by red and lower by blue.
 
----
-
-## **Results:**  
+### **Results:**  
 1. **Annual Flight Distribution (Bar Chart):**  
    - Countries like **Canada** (79,437 flights) and **Micronesia** (60,990 flights) have the highest flight volumes.  
    - Many countries show minimal air traffic, reflecting regional disparities in aviation activity.  
@@ -334,9 +328,7 @@ This visualization consists of two key charts—**Annual Flight Distribution by 
    - **Africa**, **South America**, and smaller island nations show low flight intensity, highlighted by blue and green shades.  
    - The map allows for an immediate geographic interpretation of air traffic distribution.
 
----
-
-## **Use Cases:**  
+### **Use Cases:**  
 - **Global Flight Analysis**:  
    - Identify countries and regions with the highest and lowest flight activity.  
 - **Aviation Industry Insights**:  
@@ -387,7 +379,7 @@ for year in grouped_data['Year'].unique():
   - **Resource Planning:** Allocate resources to regions with higher flight intensity.  
   - **Expansion Opportunities:** Identify underserved regions for potential flight routes.
 
-**Script Snippet:**
+### **Script Snippet:**
 ```python
 series.set_palette_point_coloring(
     steps=[
@@ -409,20 +401,20 @@ series.append_samples(
 ---
 
 #### **9. Monthly Airline Traffic: Flights and Load Factor (Bar and Line Chart)**
-- **Description:**  
+### **Description:**  
   This chart combines a bar chart and line series to visualize airline traffic over time. The bar chart shows the total number of flights per month, while the red and blue line series represent the load factor (%) and engine RPM, respectively.
 
-- **Results:**  
+### **Results:**  
   - Total flights show significant growth trends until 2019, followed by a sharp decline during the COVID-19 pandemic in 2020.  
   - Load factor remains steady in the range of 75%-90% but drops dramatically during the pandemic.  
   - Engine RPM trends follow the load factor, confirming a correlation between operational efficiency and passenger load.
 
-- **Use Cases:**  
+### **Use Cases:**  
   - **Operational Insights:** Monitor monthly trends in flights and load factors to evaluate airline performance.  
   - **Event Impact Analysis:** Assess the impact of disruptions (e.g., COVID-19) on air traffic.  
   - **Efficiency Monitoring:** Evaluate engine RPM to analyze operational efficiency.
 
-**Script Snippet:**
+### **Script Snippet:**
 ```python
 line_series_LF.append_samples(
     x_values=data_bar['Date'].astype(np.int64) // 10**6,
@@ -438,20 +430,20 @@ bar_chart.set_data(bar_chart_data).set_value_label_display_mode('hidden')
 ---
 
 #### **10. Popular Airline Routes (Line Map Chart)**
-- **Description:**  
+### **Description:**  
   This map chart visualizes the most popular airline routes globally. Lines connect origin and destination airports, with color intensity representing the total number of flights.
 
-- **Results:**  
+### **Results:**  
   - Key international routes are concentrated between North America, Europe, and Asia, highlighting major air corridors.  
   - High-intensity routes (in red) are visible between major hubs like North America and Europe.  
   - Less dense routes (in blue/green) indicate smaller regional connections.
 
-- **Use Cases:**  
+### **Use Cases:**  
   - **Route Optimization:** Identify the most profitable and busiest routes for better operational planning.  
   - **Network Analysis:** Analyze global airline connectivity and expansion opportunities.  
   - **Strategic Planning:** Inform airlines about regions with high demand for air travel.
 
-**Script Snippet:**
+### **Script Snippet:**
 ```python
 route_series.append_samples(
     x_values=[origin['Longitude'], destination['Longitude']],
